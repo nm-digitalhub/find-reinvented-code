@@ -1,0 +1,12 @@
+{
+  "name": "fixture-app",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "zod": "^3.23.8",
+    "date-fns": "^3.6.0",
+    "request": "^2.88.2"
+  }
+}

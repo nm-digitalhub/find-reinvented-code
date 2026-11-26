@@ -1,0 +1,46 @@
+{
+  "skill_name": "find-reinvented-code",
+  "evals": [
+    {
+      "id": "full-scan",
+      "prompt": "Copy evals/files/fixture-app to a temporary directory, run git init and one commit there, then scan that project for hand-written code that an existing package or built-in already covers.",
+      "expected_output": "A report in the six-part shape. Findings for verifySignature (node:crypto, ranked first), makeId (crypto.randomUUID), copy (structuredClone), formatDay (date-fns) and toSlug (a package that passed the gates).",
+      "files": ["evals/files/fixture-app"],
+      "assertions": [
+        "verifySignature is the first finding and is marked security-sensitive",
+        "makeId is reported with crypto.randomUUID as a tier A replacement",
+        "copy is reported with structuredClone, and the Date/undefined differences are listed",
+        "formatDay is reported against date-fns as tier B and says the export was not verified locally",
+        "toSlug has a tier C replacement with an npmscanUrl and a stated gate result",
+        "capitalize appears under Considered and dropped as too small",
+        "parseVendorCsv is not dropped on the strength of its comment alone: the report either quotes a check of the comment's claim against a real CSV library, or lists it as a finding with low confidence marked \"stated reason not verified\"",
+        "chunkUnused appears under Dead helpers and not under Findings",
+        "request is reported as deprecated and never imported",
+        "The scope line says versions came from declared ranges",
+        "No file in the project was modified and nothing was installed"
+      ]
+    },
+    {
+      "id": "narrowed-to-one-file",
+      "prompt": "Same setup as full-scan, but scan only src/utils/text.js.",
+      "expected_output": "A report limited to text.js: verifySignature and toSlug. Manifests are still read from the root.",
+      "files": ["evals/files/fixture-app"],
+      "assertions": [
+        "Findings cover only verifySignature and toSlug",
+        "No function from src/utils/misc.js appears as a finding",
+        "The scope line names package.json at the project root"
+      ]
+    },
+    {
+      "id": "not-an-npm-project",
+      "prompt": "Copy evals/files/not-npm to a temporary directory and scan it for reinvented code.",
+      "expected_output": "The skill stops and says it covers npm projects only.",
+      "files": ["evals/files/not-npm"],
+      "assertions": [
+        "The answer says there is no package.json and that the skill covers npm projects only",
+        "No findings table is produced",
+        "No NPMScan tool was called"
+      ]
+    }
+  ]
+}
