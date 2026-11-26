@@ -1,0 +1,32 @@
+{
+  "author": "nm-digitalhub",
+  "version": "0.1.0",
+  "category": "developer-tools",
+  "tags": {
+    "he": [
+      "תלויות",
+      "npm",
+      "ביקורת-קוד",
+      "שימוש-חוזר",
+      "מפתחים"
+    ],
+    "en": [
+      "dependencies",
+      "npm",
+      "code-audit",
+      "reuse",
+      "developer"
+    ]
+  },
+  "display_name": {
+    "he": "איתור קוד שהומצא מחדש",
+    "en": "Find Reinvented Code"
+  },
+  "display_description": {
+    "he": "סורקים פרויקט npm ומאתרים קוד שנכתב ידנית למרות שכבר קיים לו תחליף: יכולת מובנית של הפלטפורמה, תלות שכבר מותקנת, או חבילת npm בריאה. כל מקרה מדווח עם תחליף מאומת. מתאים כשמבקשים למצוא קוד שממציא את הגלגל מחדש, לבדוק פונקציות עזר, או לבחון אם ספרייה כבר עושה משהו שהפרויקט כתב בעצמו. לא מתאים לבדיקת פגיעויות, לשדרוג תלויות, להסרת חבילות לא בשימוש או לכתיבת פונקציית עזר חדשה. דורש את שרת NPMScan.",
+    "en": "Scans an npm project for hand-written code that duplicates a platform built-in, an already-installed dependency or a healthy npm package, and reports each case with a verified replacement. Use when asked to find reinvented-wheel code, audit custom helpers or utils, or check whether a library already does something the project wrote by hand. Not for vulnerability audits, dependency upgrades, removing unused packages or writing a new helper. Requires the NPMScan MCP server."
+  },
+  "supported_agents": [
+    "claude-code"
+  ]
+}

@@ -122,8 +122,19 @@ triggers: 10 that should trigger it and 11 near-misses that should not.
 
 `evals/files/fixture-app/package.json` declares the deprecated `request`
 package on purpose: it is one of the planted cases. Nothing there is installed
-or run. Installing the skill copies the `evals/` folder along with it, without
-that `package.json`.
+or run.
+
+## Repository layout
+
+```
+find-reinvented-code/        the skill folder: this is what gets installed
+  SKILL.md
+  SKILL_HE.md                Hebrew version, same sections in the same order
+  metadata.json              catalog metadata
+evals/                       test cases and fixtures, not installed
+README.md
+LICENSE
+```
 
 ## License
 
