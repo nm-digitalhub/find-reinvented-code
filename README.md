@@ -75,3 +75,7 @@ with their fixtures under `evals/files/`:
 package on purpose: it is one of the planted cases. Nothing there is installed
 or run. The evals live outside `skills/` so that installing the skill does not
 copy them.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
