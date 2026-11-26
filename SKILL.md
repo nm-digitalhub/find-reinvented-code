@@ -1,6 +1,6 @@
 ---
 name: find-reinvented-code
-description: Scans an npm project for hand-written code that duplicates a platform built-in, an already-installed dependency or a healthy npm package, and reports each case with a verified replacement. Reads package.json and checks packages through the NPMScan MCP server. Use when asked to find reinvented-wheel code, audit custom helpers or utils, check whether a library already does something the project wrote by hand, or review dependency reuse.
+description: Scans an npm project for hand-written code that duplicates a platform built-in, an already-installed dependency or a healthy npm package, and reports each case with a verified replacement. Reads package.json and checks packages through the NPMScan MCP server. Use when asked to find reinvented-wheel code, audit custom helpers or utils, check whether a library already does something the project wrote by hand, or review dependency reuse. Not for vulnerability audits, dependency upgrades, removing unused packages, finding duplication between the project's own modules, or writing a new helper.
 license: MIT
 compatibility: Written for Claude Code (context, agent, background and argument-hint are Claude Code fields; other clients ignore them and run the skill inline). Requires the NPMScan MCP server connected under the name npmscan, network access, git, and Node.js with npm. Uses the Serena MCP server (connected under the name serena) for symbol lookups when it is present; works without it.
 argument-hint: "[optional path or topic to narrow the scan]"

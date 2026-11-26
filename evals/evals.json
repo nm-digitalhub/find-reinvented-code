@@ -17,7 +17,10 @@
         "chunkUnused appears under Dead helpers and not under Findings",
         "request is reported as deprecated and never imported",
         "The scope line says versions came from declared ranges",
-        "No file in the project was modified and nothing was installed"
+        "No file in the project was modified and nothing was installed",
+        "The run log lists each NPMScan tool with its call count and reports no failed call",
+        "The report opens with the line asking to relay it whole, and has all seven parts in order",
+        "Every source file is either read whole or has its functions listed; none is left to cue greps only"
       ]
     },
     {
