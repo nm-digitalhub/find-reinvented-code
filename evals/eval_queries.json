@@ -1,0 +1,24 @@
+[
+  { "query": "Scan this project for code we wrote by hand that a library already does.", "should_trigger": true },
+  { "query": "Do we have any reinvented wheels in this repo?", "should_trigger": true },
+  { "query": "Audit src/utils: which of these helpers could be replaced by a package or a built-in?", "should_trigger": true },
+  { "query": "What hand-written code can we delete and replace with dependencies we already have installed?", "should_trigger": true },
+  { "query": "Review our dependency reuse. Are we using what is already in package.json, or rewriting it ourselves?", "should_trigger": true },
+  { "query": "Check whether our hand-rolled retry and debounce code duplicates something Node already ships.", "should_trigger": true },
+  { "query": "Go over the whole codebase and tell me where there is an npm package for something our custom helpers do.", "should_trigger": true },
+  { "query": "Find custom utilities in this npm project that a built-in or an installed dependency already covers.", "should_trigger": true },
+  { "query": "תסרוק את הפרויקט ותמצא קוד שנכתב ידנית למרות שקיימת חבילה שעושה בדיוק את זה", "should_trigger": true },
+  { "query": "יש לנו פונקציות עזר שממציאות את הגלגל מחדש? תבדוק את תיקיית lib", "should_trigger": true },
+
+  { "query": "Run npm audit and fix the vulnerabilities.", "should_trigger": false },
+  { "query": "Which packages in package.json are unused? Remove them.", "should_trigger": false },
+  { "query": "Upgrade all our dependencies to their latest versions.", "should_trigger": false },
+  { "query": "Find code that is duplicated between our own modules and extract a shared helper.", "should_trigger": false },
+  { "query": "Write a debounce function for the search input.", "should_trigger": false },
+  { "query": "Which date library should I pick for a new project?", "should_trigger": false },
+  { "query": "Refactor src/utils/text.js so it is easier to read.", "should_trigger": false },
+  { "query": "Find dead code in the project and delete it.", "should_trigger": false },
+  { "query": "Is the slugify package safe to install?", "should_trigger": false },
+  { "query": "תבדוק אם יש פגיעויות אבטחה בתלויות שלנו", "should_trigger": false },
+  { "query": "תוסיף את lodash לפרויקט ותחליף את הלולאה הזו ב-groupBy", "should_trigger": false }
+]
